@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=69.0"]
+requires = ["setuptools>=77.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -7,7 +7,8 @@ name = "jde-readonly-mcp"
 version = "0.1.0"
 description = "Read-only Model Context Protocol (MCP) server for JD Edwards EnterpriseOne on Oracle Database"
 readme = "README.md"
-license = { text = "MIT" }
+license = "MIT"
+license-files = ["LICENSE"]
 requires-python = ">=3.11"
 authors = [
     { name = "Jesús Mendoza" },
@@ -17,7 +18,6 @@ classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
     "Intended Audience :: System Administrators",
-    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
@@ -33,6 +33,10 @@ dependencies = [
 [project.optional-dependencies]
 keyring = ["keyring>=25.0.0"]
 dev = ["pytest>=8.0.0"]
+
+[project.urls]
+Homepage = "https://github.com/jesusmendoza-dev/jde-readonly-mcp"
+Issues = "https://github.com/jesusmendoza-dev/jde-readonly-mcp/issues"
 
 [project.scripts]
 jde-readonly-mcp = "jde_readonly_mcp.server:main"

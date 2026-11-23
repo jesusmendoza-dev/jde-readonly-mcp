@@ -42,13 +42,21 @@ See [SECURITY.md](SECURITY.md) for the full threat model and a least-privilege O
 
 Requires Python 3.11+.
 
-Install directly from GitHub:
+Install from PyPI:
+
+```bash
+pip install jde-readonly-mcp
+# With OS credential store support (Windows Credential Manager, macOS Keychain, Linux Secret Service):
+pip install "jde-readonly-mcp[keyring]"
+```
+
+Or install the latest version directly from GitHub:
 
 ```bash
 pip install "git+https://github.com/jesusmendoza-dev/jde-readonly-mcp.git"
 ```
 
-With OS credential store support (Windows Credential Manager, macOS Keychain, Linux Secret Service):
+With OS credential store support:
 
 ```bash
 pip install "jde-readonly-mcp[keyring] @ git+https://github.com/jesusmendoza-dev/jde-readonly-mcp.git"
