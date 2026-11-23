@@ -42,14 +42,26 @@ See [SECURITY.md](SECURITY.md) for the full threat model and a least-privilege O
 
 Requires Python 3.11+.
 
+Install directly from GitHub:
+
 ```bash
-pip install -e ".[dev]"
+pip install "git+https://github.com/jesusmendoza-dev/jde-readonly-mcp.git"
 ```
 
-For OS credential store support (Windows Credential Manager, macOS Keychain, Linux Secret Service):
+With OS credential store support (Windows Credential Manager, macOS Keychain, Linux Secret Service):
 
 ```bash
-pip install -e ".[keyring]"
+pip install "jde-readonly-mcp[keyring] @ git+https://github.com/jesusmendoza-dev/jde-readonly-mcp.git"
+```
+
+Or install from a local clone:
+
+```bash
+git clone https://github.com/jesusmendoza-dev/jde-readonly-mcp.git
+cd jde-readonly-mcp
+pip install .
+# With OS credential store support:
+pip install ".[keyring]"
 ```
 
 ## Configuration
@@ -92,6 +104,12 @@ Configure the server through environment variables:
 ```
 
 ## Testing
+
+For local development, install in editable mode with test dependencies:
+
+```bash
+pip install -e ".[dev]"
+```
 
 Unit tests run without an Oracle instance using fake database clients and temporary audit files:
 
