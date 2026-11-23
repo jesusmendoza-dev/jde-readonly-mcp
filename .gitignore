@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local secrets & runtime logs
+.env
+.env.*
+!.env.example
+*.log
+*.jsonl
+audit/
+
+# OS & editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
